@@ -1,0 +1,17 @@
+body {
+	background-image: url(http://www.mycorporateparents.co.uk/wp-content/uploads/2017/03/iStock-486438046.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+  	color: white;
+}
+
+header {
+	text-align: center;
+	border: 2px solid white;
+}

@@ -1,18 +1,69 @@
 <html>
 	<head>
+		<title>Gee Mail</title>
 		<script src="js/mail-generator.js"></script>
 		<link href="css/style.css" rel="stylesheet" media="screen">
     <script>
       window.onload = function(){
         // ALL OF YOUR JAVASCRIPT CODE SHOULD GO HERE. 
         // We have to use window.onload so your JavaScript doesn't execute until the page has loaded and all HTML has been downloaded to your browser
+
+        var mailCount = 0;
+
+
+        // console.log(window.geemails);
+
+        var mails = window.geemails;
+
+        var iNter = setInterval(makeLine(getNewMessage()), 2000);
+
+        function makeLine (obj){
+
+        	var bawdy = document.getElementById("main");
+        	var letter = document.createElement("div");
+        	letter.class = "messages";
+  
+
+        	var sEnder = document.createElement("h2");
+        	sEnder.class = "senders";
+        	sEnder.innerHTML = obj.sender;
+        	letter.appendChild(sEnder);
+
+        	var sUbject = document.createElement("h2");
+        	sUbject.class = "subjs";
+        	sUbject.innerHTML = obj.subject;
+        	letter.appendChild(sUbject);
+
+        	var dAte = document.createElement("h3");
+        	dAte.class = "dates";
+        	dAte.innerHTML = obj.date;
+        	letter.appendChild(dAte);
+
+        	var cOntent = document.createElement("p");
+        	cOntent.class = "contents";
+        	cOntent.innerHTML = obj.body;
+        	letter.appendChild(cOntent);
+
+        	bawdy.appendChild(letter);
+
+        	mailCount++;
+        }
+
+        for (var i = 0; i < mails.length; i++){
+        	makeLine(mails[i]);
+        }
+        // stretch goals: helper functions
+
         
       };
     </script>
 	</head>
 	<body>
+		<header>
+			<h1>Gee Mail</h1>
+			<h2>Email for Oh Gees</h2>
+		</header>
 		<div class="container" id="main">
-			Build Me!
 		</div>
 	</body>
 </html>
