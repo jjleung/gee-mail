@@ -10,34 +10,39 @@
 
         var mailCount = 0;
 
-
         // console.log(window.geemails);
 
         var mails = window.geemails;
 
-        var iNter = setInterval(makeLine(getNewMessage()), 2000);
+        // var iNter = setInterval(makeLine(getNewMessage()), 2000);
+
+        var iNter = setInterval(function(){ makeLine(getNewMessage()) }, 4500);
 
         function makeLine (obj){
 
         	var bawdy = document.getElementById("main");
         	var letter = document.createElement("div");
         	letter.class = "messages";
+        	var deets = document.createElement("div");
+        	deets.class = "details";
   
 
         	var sEnder = document.createElement("h2");
         	sEnder.class = "senders";
         	sEnder.innerHTML = obj.sender;
-        	letter.appendChild(sEnder);
+        	deets.appendChild(sEnder);
 
         	var sUbject = document.createElement("h2");
         	sUbject.class = "subjs";
         	sUbject.innerHTML = obj.subject;
-        	letter.appendChild(sUbject);
+        	deets.appendChild(sUbject);
 
         	var dAte = document.createElement("h3");
         	dAte.class = "dates";
         	dAte.innerHTML = obj.date;
-        	letter.appendChild(dAte);
+        	deets.appendChild(dAte);
+
+        	letter.appendChild(deets);
 
         	var cOntent = document.createElement("p");
         	cOntent.class = "contents";
@@ -47,6 +52,10 @@
         	bawdy.appendChild(letter);
 
         	mailCount++;
+
+        	var showCount = mailCount.toString();
+        	var countSpace = document.getElementById("count");
+        	countSpace.innerHTML = "Messages: " + showCount;
         }
 
         for (var i = 0; i < mails.length; i++){
@@ -54,7 +63,8 @@
         }
         // stretch goals: helper functions
 
-        
+		var hed = document.getElementById(count);
+
       };
     </script>
 	</head>
@@ -62,6 +72,7 @@
 		<header>
 			<h1>Gee Mail</h1>
 			<h2>Email for Oh Gees</h2>
+			<div id="count"></div>
 		</header>
 		<div class="container" id="main">
 		</div>
