@@ -1,5 +1,6 @@
 body {
-	background-image: url(http://www.mycorporateparents.co.uk/wp-content/uploads/2017/03/iStock-486438046.jpg);
+	/*background-image: url(http://www.mycorporateparents.co.uk/wp-content/uploads/2017/03/iStock-486438046.jpg);*/
+	background-image: url(https://francineinretirement.files.wordpress.com/2012/02/img_0782a.jpg);
 	background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -8,10 +9,108 @@ body {
   	-o-background-size: cover;
   	background-size: cover;
 
-  	color: white;
+  	color: black
 }
 
 header {
 	text-align: center;
-	border: 2px solid white;
+	align-content: center;
+	align-items: center;
+	border: 2px solid gray;
+	margin-bottom: 30px;
+	background-image: url(https://i.pinimg.com/originals/ac/8a/57/ac8a57133901d486c2483c87f817857c.jpg);
+	background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
+
+#title {
+	font-size: 90pt;
+	line-height: 0%;
+	font-family: 'Sedgwick Ave Display', cursive;
+	color: black;
+}
+
+
+#subHead {
+	font-family: 'Permanent Marker', cursive;
+	color: indigo;
+	line-height: 0%;
+	font-size: 26pt;
+}
+
+#count {
+	background-image: url(/assets/envelope-icon.png);
+	border: none;
+	width: 12%;
+	height: 100px;
+	margin: auto;
+	line-height: 265%;
+	font-family: 'Sedgwick Ave Display', cursive;
+	font-size: 32pt;
+	color: black;
+	
+	background-repeat: no-repeat;
+    background-position: center;
+  	background-size: contain;
+}
+
+#stopper {
+	text-align: center;
+	margin: 10px;
+	outline: none;
+	transition: .15s linear;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 18pt;
+}
+
+#stopper:hover {
+	background-color: mediumvioletred;
+}
+
+.details {
+	width: 100%
+	background-color;
+}
+
+section {
+	background-image: url(http://www.gohome.pt/eventos/imagem_201211011234251351769665_91.jpg);
+	height: 10px;
+	line-height: 0%;
+	padding-left: 8px;
+	padding-bottom: 36px;
+	border: 1px solid midnightblue;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 50px;
+	color: white;
+}
+
+h3 {
+	font-family: 'Permanent Marker', cursive;
+	font-size: 20pt;
+}
+
+h4{
+	font-family: 'Bahiana', cursive;
+	font-size: 16pt;
+}
+
+p {
+	background: rgb(55, 55, 55);
+	background: rgba(55, 55, 55, .4);
+	color: honeydew;
+	font-family: 'Rock Salt', cursive;
+	font-size: 10pt;
+	margin-top: 16px;
+	margin-bottom: 30px;
+	display: block;
+}
+
