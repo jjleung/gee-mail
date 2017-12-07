@@ -33,6 +33,7 @@ header {
 	line-height: 0%;
 	font-family: 'Sedgwick Ave Display', cursive;
 	color: black;
+	padding-top: 20px;
 }
 
 
@@ -78,7 +79,7 @@ header {
 }
 
 section {
-	background-image: url(http://www.gohome.pt/eventos/imagem_201211011234251351769665_91.jpg);
+	background-image: url(http://berlinstreetart.com/wp-content/uploads/2016/03/Berlin-Graffiti-Wall-of-Fame-1.jpg);
 	height: 10px;
 	line-height: 0%;
 	padding-left: 8px;
