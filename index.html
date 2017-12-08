@@ -35,37 +35,29 @@
 
         	var bawdy = document.getElementById("main");
         	var letter = document.createElement("div");
-        	letter.class = "messages";
+        	letter.className = "messages";
         	var deets = document.createElement("section");
-        	deets.class = "details";
+        	deets.className = "details";
 
         	var sEnder = document.createElement("li");
-        	sEnder.class = "senders";
+        	sEnder.className = "senders";
         	sEnder.innerHTML = "<h3>"+obj.sender+"</h3>";
         	deets.appendChild(sEnder);
 
         	var sUbject = document.createElement("li");
-        	sUbject.class = "subjs";
+        	sUbject.className = "subjs";
         	sUbject.innerHTML = "<h3>"+obj.subject+"</h3>";
         	deets.appendChild(sUbject);
 
         	var dAte = document.createElement("li");
-        	dAte.class = "dates";
+        	dAte.className = "dates";
         	dAte.innerHTML = "<h4>"+obj.date+"</h4>";
-        	deets.appendChild(dAte);
+        	deets.appendChild(dAte);;
 
         	letter.appendChild(deets);
 
-            var switchBox = document.createElement("li");
-            deets.appendChild(switchBox);
-            var showSwitch = document.createElement("button");
-            showSwitch.class = "shower";
-            showSwitch.innerHTML = "Show Message";
-            showSwitch.addEventListener("click", showText);
-            switchBox.appendChild(showSwitch);
-
         	var cOntent = document.createElement("p");
-        	cOntent.class = "contents";
+        	cOntent.className = "contents";
         	cOntent.innerHTML = obj.body;
         	letter.appendChild(cOntent);
 
@@ -76,6 +68,14 @@
         	var showCount = mailCount.toString();
         	var countSpace = document.getElementById("count");
         	countSpace.innerHTML = showCount;
+
+
+            var clicks = document.getElementsByClassName("messages");
+
+            for(var h =0;h<clicks.length;h++){
+                clicks[i].addEventListener("click", showText);
+            }
+
         }
 
         for (var i = 0; i < mails.length; i++){

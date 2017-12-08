@@ -1,6 +1,7 @@
 body {
 	/*background-image: url(http://www.mycorporateparents.co.uk/wp-content/uploads/2017/03/iStock-486438046.jpg);*/
-	background-image: url(https://francineinretirement.files.wordpress.com/2012/02/img_0782a.jpg);
+	/*background-image: url(https://francineinretirement.files.wordpress.com/2012/02/img_0782a.jpg);*/
+	background-image: url(https://images-na.ssl-images-amazon.com/images/I/91YUjNbq1rL._SL1500_.jpg);
 	background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -112,6 +113,9 @@ p {
 	font-family: 'Rock Salt', cursive;
 	font-size: 10pt;
 	margin-top: 16px;
+}
+
+.contents {
 	display: none;
 }
 
