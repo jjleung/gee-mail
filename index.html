@@ -22,16 +22,6 @@
 
         var iNter = setInterval(function(){ makeLine(getNewMessage()) }, 3000);
 
-        var eveNter = setInterval(eventAdd, 3000);
-
-        function eventAdd(){
-            var cLicks = document.getElementsByClassName("messages");
-
-            for(var l =0;l<cLicks.length;l++){
-                cLicks[l].addEventListener("click", showText);
-            }            
-        }
-
         function showText(){
             var see = this.querySelectorAll(".contents")[0];
             if (see.style.display === "none"){
