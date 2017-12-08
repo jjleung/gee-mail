@@ -22,6 +22,15 @@
 
         var iNter = setInterval(function(){ makeLine(getNewMessage()) }, 3000);
 
+        function showText(){
+            var see = this.querySelectorAll(".contents")[0];
+            if (see.style.display === "none"){
+            see.style.display = "block";
+            }else{
+            see.style.display = "none";
+            }
+        }
+
         function makeLine (obj){
 
         	var bawdy = document.getElementById("main");
@@ -46,6 +55,14 @@
         	deets.appendChild(dAte);
 
         	letter.appendChild(deets);
+
+            var switchBox = document.createElement("li");
+            deets.appendChild(switchBox);
+            var showSwitch = document.createElement("button");
+            showSwitch.class = "shower";
+            showSwitch.innerHTML = "Show Message";
+            showSwitch.addEventListener("click", showText);
+            switchBox.appendChild(showSwitch);
 
         	var cOntent = document.createElement("p");
         	cOntent.class = "contents";
